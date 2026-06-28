@@ -17,7 +17,7 @@ body {
     background: #f4f6f8;
     color: #222;
     line-height: 1.8;
-    transition: 0.4s;
+    transition: background 0.4s, color 0.4s;
 }
 
 h1,
@@ -144,7 +144,7 @@ h3 {
     opacity: 0;
     transform: translateY(40px);
 
-    transition: 0.7s;
+    transition: all 0.7s ease;
 }
 
 .card.visible {
@@ -152,7 +152,8 @@ h3 {
     transform: translateY(0);
 }
 
-.card:hover {
+/* FIXED HOVER */
+.card.visible:hover {
     transform: translateY(-10px);
 }
 
@@ -237,39 +238,74 @@ footer {
    DARK MODE
 ========================= */
 
-.dark-mode {
+body.dark-mode {
     background: #121212;
-    color: white;
+    color: #ffffff;
 }
 
-.dark-mode .biography {
+/* Hero */
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #0f172a, #020617);
+}
+
+/* Biography */
+body.dark-mode .biography {
     background: #1e1e1e;
 }
 
-.dark-mode .timeline {
+body.dark-mode .biography h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .biography p {
+    color: #e5e7eb;
+}
+
+/* Timeline */
+body.dark-mode .timeline {
     background: #252525;
 }
 
-.dark-mode .card {
-    background: #2d2d2d;
-    color: white;
+body.dark-mode .timeline h2 {
+    color: #ffffff;
 }
 
-.dark-mode .card h3 {
+/* Cards */
+body.dark-mode .card {
+    background: #2d2d2d;
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .card h3 {
     color: #60a5fa;
 }
 
-.dark-mode .biography h2,
-.dark-mode .timeline h2 {
-    color: white;
+/* Quote Section */
+body.dark-mode .quote-section {
+    background: #0a0a0a;
 }
 
-.dark-mode footer {
-    background: #000;
+body.dark-mode .quote-section p {
+    color: #cbd5e1;
 }
 
-.dark-mode #themeBtn {
+/* Footer */
+body.dark-mode footer {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Theme Button */
+body.dark-mode #themeBtn {
     background: #f59e0b;
+    color: #111827;
+}
+
+/* Top Button */
+body.dark-mode #topBtn {
+    background: #f59e0b;
+    color: #111827;
 }
 
 
