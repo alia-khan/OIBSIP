@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>Dashboard</h1>
+
+            <p class="welcome-message">
+                Welcome, <span id="displayUser"></span>!
+            </p>
+
+            <div class="dashboard-info">
+                <h3>Protected Page</h3>
+
+                <p>
+                    This page is only accessible after successful login.
+                </p>
+
+                <p>
+                    If a user tries to access this page directly without an
+                    active session, they will be redirected to the login page.
+                </p>
+            </div>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

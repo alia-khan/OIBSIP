@@ -1,0 +1,303 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.8;
+    transition: 0.4s;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Merriweather', serif;
+}
+
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+#themeBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 30px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+#themeBtn:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    color: #d1d5db;
+    margin-bottom: 35px;
+    min-height: 40px;
+}
+
+.hero img {
+    width: 320px;
+    max-width: 90%;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.hero img:hover {
+    transform: scale(1.03);
+}
+
+.hero img.zoomed {
+    transform: scale(1.12);
+}
+
+
+/* =========================
+   BIOGRAPHY
+========================= */
+
+.biography {
+    background: white;
+    padding: 80px 10%;
+}
+
+.biography h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #1f2937;
+}
+
+.biography p {
+    margin-bottom: 22px;
+    text-align: justify;
+    font-size: 17px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    background: #e8f1f8;
+    padding: 80px 10%;
+}
+
+.timeline h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition: 0.7s;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   QUOTE SECTION
+========================= */
+
+.quote-section {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+blockquote {
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.quote-section p {
+    color: #d1d5db;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+
+#topBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+#topBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#topBtn:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .biography {
+    background: #1e1e1e;
+}
+
+.dark-mode .timeline {
+    background: #252525;
+}
+
+.dark-mode .card {
+    background: #2d2d2d;
+    color: white;
+}
+
+.dark-mode .card h3 {
+    color: #60a5fa;
+}
+
+.dark-mode .biography h2,
+.dark-mode .timeline h2 {
+    color: white;
+}
+
+.dark-mode footer {
+    background: #000;
+}
+
+.dark-mode #themeBtn {
+    background: #f59e0b;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    blockquote {
+        font-size: 1.4rem;
+    }
+
+    .biography,
+    .timeline {
+        padding: 60px 6%;
+    }
+
+    #themeBtn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

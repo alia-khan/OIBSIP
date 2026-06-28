@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card fade-in">
+
+            <h1>Create Account</h1>
+            <p class="subtitle">Register to continue</p>
+
+            <!-- REGISTER FORM -->
+            <form id="registerForm">
+
+                <div class="input-group">
+                    <label>Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter username"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                    minlength="8"
+                />
+                </div>
+
+                <div class="input-group">
+                    <label>Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Re-enter password"
+                        required
+                    >
+                </div>
+
+                <!-- ERROR MESSAGE -->
+                <p id="errorMessage" class="error"></p>
+
+                <!-- REGISTER BUTTON (FIXED) -->
+                <button type="submit">
+                    Register
+                </button>
+
+            </form>
+
+            <p class="bottom-text">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </div>
+    </div>
+
+    <!-- IMPORTANT: SCRIPT ORDER FIXED -->
+    <script src="hash.js"></script>
+    <script src="register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+
+            <h1>Welcome Back</h1>
+            <p class="subtitle">Login to your account</p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label>Username or Email</label>
+                    <input
+                        type="text"
+                        id="loginUser"
+                        placeholder="Enter username or email"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter password"
+                    >
+                </div>
+
+                <p id="errorMessage" class="error"></p>
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="bottom-text">
+                Don't have an account?
+                <a href="register.html">Register</a>
+            </p>
+
+        </div>
+    </div>
+
+    <script src="hash.js"></script>
+    <script src="login.js"></script>
+
+</body>
+</html>

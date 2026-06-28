@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Pro - To-Do Web App</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+
+    <!-- Delete Modal -->
+    <div id="deleteModal" class="modal">
+
+        <div class="modal-content">
+
+            <h3>Delete Task?</h3>
+
+            <p>
+                This action cannot be undone.
+            </p>
+
+            <div class="modal-buttons">
+
+                <button
+                    id="cancelDelete"
+                    class="cancel-btn">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    id="confirmDelete"
+                    class="confirm-btn">
+
+                    Delete
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+
+                <h1>📝 TaskFlow Pro</h1>
+
+                <p>
+                    Organize your daily work efficiently
+                </p>
+
+            </div>
+
+            <button
+                id="themeBtn"
+                class="theme-btn"
+                aria-label="Toggle dark mode">
+
+                🌙
+
+            </button>
+
+        </header>
+
+
+        <!-- Add Task Area -->
+        <section class="add-task-box">
+
+            <!-- Task Name -->
+            <div class="field-group">
+
+                <label
+                    for="taskInput"
+                    class="sr-only">
+
+                    Task Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a new task..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- Priority -->
+            <div class="field-group">
+
+                <label
+                    for="prioritySelect"
+                    class="sr-only">
+
+                    Priority
+
+                </label>
+
+                <select id="prioritySelect">
+
+                    <option value="Low">
+                        🟢 Low
+                    </option>
+
+                    <option
+                        value="Medium"
+                        selected>
+
+                        🟡 Medium
+                    </option>
+
+                    <option value="High">
+                        🔴 High
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Category -->
+            <div class="field-group">
+
+                <label
+                    for="categoryInput"
+                    class="sr-only">
+
+                    Category
+
+                </label>
+
+                <label for="categoryInput" class="sr-only">
+                    Category
+                </label>
+                
+                <select id="categoryInput">
+                
+                    <option value="Study" selected>
+                        📚 Study
+                    </option>
+                
+                    <option value="Work">
+                        💼 Work
+                    </option>
+                
+                    <option value="Personal">
+                        👤 Personal
+                    </option>
+                
+                    <option value="Shopping">
+                        🛒 Shopping
+                    </option>
+                
+                    <option value="Health">
+                        🏃 Health
+                    </option>
+                
+                    <option value="Family">
+                        👨‍👩‍👧 Family
+                    </option>
+                
+                    <option value="Other">
+                        📌 Other
+                    </option>
+                
+                </select>
+
+            </div>
+
+
+            <!-- Due Date -->
+            <div class="field-group">
+
+                <label
+                    for="dueDateInput"
+                    class="sr-only">
+
+                    Due Date
+
+                </label>
+
+                <input
+                    type="date"
+                    id="dueDateInput"
+                >
+
+            </div>
+
+
+            <!-- Add Button -->
+            <button id="addTaskBtn">
+
+                ➕ Add Task
+
+            </button>
+
+        </section>
+
+
+        <!-- Search -->
+        <section class="search-box">
+
+            <label
+                for="searchInput"
+                class="sr-only">
+
+                Search Tasks
+
+            </label>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search tasks..."
+            >
+
+        </section>
+
+
+        <!-- Main Content -->
+        <main class="task-grid">
+
+            <!-- Pending Tasks -->
+            <section class="task-section">
+
+                <div class="section-header">
+
+                    <h2>📌 Pending Tasks</h2>
+
+                    <span id="pendingCount">
+
+                        0 Pending
+
+                    </span>
+
+                </div>
+
+                <ul
+                    id="pendingList"
+                    class="task-list">
+                </ul>
+
+                <p
+                    id="pendingEmpty"
+                    class="empty-state">
+
+                    🎉 No pending tasks. Add one above!
+
+                </p>
+
+            </section>
+
+
+            <!-- Completed Tasks -->
+            <section class="task-section">
+
+                <div class="section-header">
+
+                    <h2>✅ Completed Tasks</h2>
+
+                    <span id="completedCount">
+
+                        0 Completed
+
+                    </span>
+
+                </div>
+
+                <ul
+                    id="completedList"
+                    class="task-list">
+                </ul>
+
+                <p
+                    id="completedEmpty"
+                    class="empty-state">
+
+                    No completed tasks yet.
+
+                </p>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                Built with HTML5, CSS3 & Vanilla JavaScript
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
