@@ -1,8 +1,8 @@
- Calculator
+ Tribute Page - Abdul Sattar Edhi
 
-Objective
+ Objective
 
-A browser-based calculator that performs basic arithmetic operations.
+A tribute webpage dedicated to Abdul Sattar Edhi, highlighting his life, achievements, and humanitarian work.
 
  Technologies Used
 
@@ -12,18 +12,16 @@ A browser-based calculator that performs basic arithmetic operations.
 
  Features
 
-* Addition, subtraction, multiplication, and division
-* Decimal support
-* Clear (AC) button
-* Backspace button
-* Keyboard support
-* Dark/Light mode toggle
-* Responsive design
-* Error handling for invalid expressions and division by zero
+* Hero section with image
+* Biography section
+* Timeline of major events
+* Inspirational quotes
+* Responsive layout
+* Interactive elements using JavaScript
 
  How to Run
 
-Open `index.html` in any modern web browser.
+Open `index.html` in any web browser.
 
  Author
 
